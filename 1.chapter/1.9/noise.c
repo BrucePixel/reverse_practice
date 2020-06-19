@@ -5,7 +5,7 @@
  * Output: linux.s
  *
  * Platform: Windows 10
- * Command: cl.exe /Fawin.asm noise.c
+ * Command: cl.exe /Fawin.asm /Fewin.exe /Fowin.obj noise.c
  * Output: win.asm win.obj
  *
  */
