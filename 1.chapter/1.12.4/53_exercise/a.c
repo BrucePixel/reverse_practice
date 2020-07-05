@@ -5,22 +5,22 @@
  * Output: linux.s
  *
  * Platform: Windows 10
- * Command: cl.exe /Fawin.asm scanf.c
+ * Command: cl.exe /MD /Fawin.asm a.c
  * Output: win.asm win.obj
  *
  */
 
+#include <string.h>
 #include <stdio.h>
 
+void alter_string(char *s)
+{
+    strcpy(s, "Goodbye!");
+    printf("Result: %s\n", s);
+}
 
-int x = 10;
+
 int main()
 {
-    printf("Enter x:\n");
-
-    scanf("%d", &x);
-
-    printf("You entered %d...\n", x);
-
-    return 0;
+    alter_string("Hello, world\n");
 }

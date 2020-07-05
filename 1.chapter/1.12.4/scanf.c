@@ -5,7 +5,7 @@
  * Output: linux.s
  *
  * Platform: Windows 10
- * Command: cl.exe /Fawin.asm scanf.c
+ * Command: cl.exe /MD /Fawin.asm scanf.c
  * Output: win.asm win.obj
  *
  */
@@ -18,9 +18,15 @@ int main()
 {
     printf("Enter x:\n");
 
-    scanf("%d", &x);
+    if (scanf("%d", &x) == 1)
+    {
+        printf("You entered %d...\n", x);
+    }
+    else
+    {
+        printf("what did you enter?\n");
+    }
 
-    printf("You entered %d...\n", x);
 
     return 0;
 }
